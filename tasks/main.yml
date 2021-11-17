@@ -1,0 +1,13 @@
+---
+# tasks file for ansible-role-docker-compose
+- name: Download docker-compose for linux
+  get_url:
+    url: https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-{{ ansible_system }}-{{ansible_architecture}}
+    dest: /usr/local/bin/docker-compose
+    mode: a+x
+
+- name: Executeable on root user for docker-compose binary
+  ansible.builtin.file:
+    src: /usr/local/bin/docker-compose
+    dest: /usr/bin/docker-compose
+    state: link

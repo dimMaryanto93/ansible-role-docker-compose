@@ -1,0 +1,3 @@
+---
+# defaults file for ansible-role-docker-compose
+docker_compose_version: '1.29.2'
