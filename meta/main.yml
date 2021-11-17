@@ -1,7 +1,7 @@
 galaxy_info:
   author: dimmaryanto93
   role_name: docker_compose
-  description: Install docker-compose for linux using ansible
+  description: Install docker-compose for linux
   company: PT. Tabeldata Informatika
 
   license:
