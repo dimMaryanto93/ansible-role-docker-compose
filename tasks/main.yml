@@ -1,5 +1,10 @@
 ---
 # tasks file for ansible-role-docker-compose
+- name: Import python docker module
+  pip:
+    name: docker-compose
+    state: latest
+
 - name: Download docker-compose for linux
   get_url:
     url: https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-{{ ansible_system }}-{{ansible_architecture}}
